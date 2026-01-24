@@ -3,12 +3,33 @@
 ---
 
 
-<div>
+<div class="headerbar">
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/blogs">Blogs</a>
-
-
-
-
 </div>
+
+<style>
+
+html{
+  --text: #e5e9fd;
+  --background: #03061d;
+  --primary: #8197f3;
+  --secondary: #800e95;
+  --accent: #eb2ed2;
+    background-color: var(--background);
+}
+.headerbar{
+    
+    width: 100%;
+    text-align: center;
+}
+.headerbar a{
+    margin: 0% 0%;
+    padding: 10px 10%;
+    border: 3px solid var(--primary);
+    border-radius: 3px;
+    background-color: var(--secondary);
+}
+
+</style>
