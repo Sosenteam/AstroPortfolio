@@ -1,10 +1,55 @@
 ---
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import '../styles/global.css'
+const posts = Object.values(import.meta.glob("./blogs/*.md", { eager: true }));
 ---
+
 <Layout pageTitle="Blogs">
-    <h1>This is where the blogs go</h1>
+  <h1>Blogs</h1>
+  <div class="bloglist">
+    <ul>
+      {
+        posts.map((post) => (
+          <div class="post">
+          <a href={post.url}>
+            <li>
+              <h3>
+                {post.frontmatter.title}
+              </h3>
+              <p>{post.frontmatter.description}</p>
+            </li>
+          </a>
+          </div>
+        ))
+      }
+    </ul>
+  </div>
 </Layout>
+
+<style>
+  .bloglist {
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    .post{
+      margin: 10px 30%;
+      border: 3px solid var(--secondary);
+      border-radius: 10px;
+      text-align: center;
+    }
+    li {
+      
+    }
+    p {
+      text-decoration: none;
+      font-weight: normal;
+    }
+    h3 {
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+</style>

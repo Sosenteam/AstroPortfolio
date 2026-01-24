@@ -10,6 +10,7 @@ html {
   --secondary: #800e95;
   --accent: #eb2ed2;
     background-color: var(--background);
+    color: var(--text);
 
 }
 
