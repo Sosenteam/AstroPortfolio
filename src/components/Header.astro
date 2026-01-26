@@ -5,9 +5,11 @@ import '../styles/global.css'
 
 
 <div class="headerbar">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
+    <div class="innerheaderbar">
+    <a href="/">Home</a> | 
+    <a href="/about">About</a> | 
     <a href="/blogs">Blogs</a>
+    </div>
 </div>
 
 <style>
@@ -16,16 +18,22 @@ html{
     background-color: var(--background);
 }
 .headerbar{
-    
     width: 100%;
+    margin-top: 1%;
+}
+.innerheaderbar {
+    margin-left: 80%;
+    font-size: xx-large;
+    font-weight: 400;
     text-align: center;
 }
-.headerbar a{
-    margin: 0% 0%;
-    padding: 10px 10%;
-    border: 3px solid var(--primary);
-    border-radius: 3px;
-    background-color: var(--secondary);
+a{
+    color: var(--text);
 }
+
+a:hover{
+    color: var(--primary);
+    text-shadow: 1px 0 0 currentColor;
+
 
 </style>

@@ -1,19 +1,26 @@
 
 html {
   background-color: #f1f5f9;
-  font-family: "Roboto",sans-serif;
-  font-optical-sizing: auto;
+  font-family: "Fira Sans",sans-serif;
   font-style: normal;
-  --text: #e5e9fd;
-  --background: #03061d;
-  --primary: #8197f3;
-  --secondary: #800e95;
-  --accent: #eb2ed2;
+  --text: #f2e9ec;
+--background: #0f080a;
+--primary: #d3a7b5;
+--secondary: #6c3143;
+--accent: #c36c88;
     background-color: var(--background);
     color: var(--text);
 
 }
 
+h1 {
+  font-size: 2.5rem;
+  color: var(--text);
+  font-weight: 100;
+  font-size: 400%;
+  text-decoration: underline;
+}
+/*
 body {
   margin: 0 auto;
   width: 100%;
@@ -22,17 +29,10 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+  
 }
 
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: var(--text);
-  font-weight: 100;
-  font-size: 400%;
-  text-decoration: underline;
-}
+
 
 a {
   color: var(--text);
@@ -40,3 +40,4 @@ a {
   text-decoration: none;
   font-size: large;
 }
+*/
