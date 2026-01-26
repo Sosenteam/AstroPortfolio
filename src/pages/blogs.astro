@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import '../styles/global.css'
+import "../styles/global.css";
 const posts = Object.values(import.meta.glob("./blogs/*.md", { eager: true }));
 ---
 
@@ -12,14 +12,12 @@ const posts = Object.values(import.meta.glob("./blogs/*.md", { eager: true }));
       {
         posts.map((post) => (
           <div class="post">
-          <a href={post.url}>
-            <li>
-              <h3>
-                {post.frontmatter.title}
-              </h3>
-              <p>{post.frontmatter.description}</p>
-            </li>
-          </a>
+            <a href={post.url}>
+              <li>
+                <h3>{post.frontmatter.title}</h3>
+                <p>{post.frontmatter.description}</p>
+              </li>
+            </a>
           </div>
         ))
       }
@@ -29,27 +27,32 @@ const posts = Object.values(import.meta.glob("./blogs/*.md", { eager: true }));
 
 <style>
   .bloglist {
-    ul {
+    margin: 5% 15%;
+    ul{
       list-style: none;
-      padding: 0;
-    }
-    .post{
-      margin: 10px 30%;
-      border: 3px solid var(--secondary);
-      border-radius: 10px;
+      width: 100%;
+      grid-template-columns: auto auto auto;
+      display: grid;
+    };
+    
+    
+  }
+  
+  .post {
+    border: 2px solid var(--text);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 60%;
+    h3{
+      color: var(--text);
       text-align: center;
     }
-    li {
-      
-    }
-    p {
-      text-decoration: none;
-      font-weight: normal;
-    }
-    h3 {
-      text-decoration: underline;
-      font-weight: bold;
-      font-size: 30px;
+    p{
+      color: var(--text);
+      text-align: center;
     }
   }
+ 
+  
 </style>
