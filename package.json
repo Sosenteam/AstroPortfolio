@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "upload": "scp -r ./dist/* alec.singer@sandbox.sonomaacademy.org ",
     "preview": "astro preview",
     "astro": "astro"
   },
