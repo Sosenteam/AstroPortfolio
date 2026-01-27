@@ -11,7 +11,7 @@ const posts = Object.values(import.meta.glob("./blogs/*.md", { eager: true }));
       {
         posts.map((post) => (
           <div class="post">
-            <a href={post.url}>
+            <a href={"/alec.singer/"+post.url}>
               <div class="innera">
               <h3>{post.frontmatter.title}</h3>
               <p>{post.frontmatter.description}</p>
