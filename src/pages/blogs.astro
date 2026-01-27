@@ -2,7 +2,16 @@
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-const posts = Object.values(import.meta.glob("./blogs/*.md", { eager: true }));
+
+interface BlogPost {
+  url: string;
+  frontmatter: {
+    title: string;
+    description: string;
+  };
+}
+
+const posts = Object.values(import.meta.glob("./blogs/*.md", { eager: true })) as BlogPost[];
 ---
 
 <Layout pageTitle="Blogs">
