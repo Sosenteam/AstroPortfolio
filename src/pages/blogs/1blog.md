@@ -24,3 +24,4 @@ Script: (actually just an rsync command in the package.json):
 ```"upload": "rsync -arvI --delete ./dist/ alec.singer@sandbox.sonomaacademy.org:/home/alec.singer/public_html", ```
 
 Afterwords I used a bit of AI to redesign the frontend of the site. I added a background grid, and attempted to add custom animations as well, but I was unable to find a performant solution.
+
