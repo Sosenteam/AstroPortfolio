@@ -1,0 +1,34 @@
+---
+import '../styles/global.css'
+
+---
+<script>
+const GridContainer = document.getElementById('GridContainer')
+let dotGrid = [];
+if(GridContainer) {
+    for(let i =0; i < window.screen.width / 20; i++) {
+        for(let j =0; j < window.screen.height / 20; j++) {
+            dotGrid.push({x: i * 20, y: j * 20});
+            const GridCell = document.createElement('div');
+            GridCell.style.position = 'fixed';
+            GridCell.style.left = `${i * 20}px`;
+            GridCell.style.top = `${j * 20}px`;
+            GridCell.style.width = '5px';
+            GridCell.style.height = '5px';
+            GridCell.className = 'grid-dot';
+            GridCell.style.backgroundColor = 'var(--accent)';
+            GridCell.style.opacity = '0.1';
+            GridCell.style.borderRadius = '50%';
+            GridContainer.appendChild(GridCell);
+        }
+    }
+}
+
+ document.addEventListener('mousemove', (e) => {
+    let x = e.clientX;
+    let y = e.clientY;
+ });
+</script>
+
+<div class="colored-grid" id="GridContainer"></div>
+

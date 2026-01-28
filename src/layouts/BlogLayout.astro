@@ -23,23 +23,66 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <div class="md">
-        <slot />
-    </div>
-    
+    <main>
+      <h1>{pageTitle}</h1>
+      <div class="md">
+          <slot />
+      </div>
+    </main>
   </body>
 </html>
 
 <style>
-    h1{
-      font-weight: 200;
-      font-size: large;
-      margin-left: 5%;
-    } 
-    .md{
-        margin: 50px;
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2rem 2rem 5%;
     }
-    p{
-        font-size: large;
+
+    h1 {
+      font-size: 3.5rem;
+      color: var(--text);
+      font-weight: 300;
+      letter-spacing: -1px;
+      margin: 2rem 0 1rem 0;
+      line-height: 1.2;
+    }
+
+    .md {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .md :global(h2) {
+      font-size: 2rem;
+      color: var(--primary);
+      font-weight: 400;
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    .md :global(h3) {
+      font-size: 1.25rem;
+      color: var(--primary);
+      font-weight: 400;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    .md :global(p) {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin: 0.75rem 0;
+    }
+
+    .md :global(a) {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
+    }
+
+    .md :global(a:hover) {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
     }
 </style>

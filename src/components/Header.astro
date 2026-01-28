@@ -13,27 +13,48 @@ import '../styles/global.css'
 </div>
 
 <style>
-
-html{
-    background-color: var(--background);
-}
-.headerbar{
+.headerbar {
     width: 100%;
-    margin-top: 1%;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--primary);
+    background: linear-gradient(180deg, rgba(211, 167, 181, 0.05) 0%, transparent 100%);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
 .innerheaderbar {
-    margin-left: 80%;
-    font-size: xx-large;
-    font-weight: 400;
-    text-align: center;
-}
-a{
-    color: var(--text);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
-a:hover{
+.innerheaderbar a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.innerheaderbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.innerheaderbar a:hover {
     color: var(--accent);
-    text-shadow: 1px 0 0 currentColor;
+}
 
-
+.innerheaderbar a:hover::after {
+    width: 100%;
+}
 </style>

@@ -23,4 +23,10 @@ const { pageTitle } = Astro.props;
   </body>
 </html>
 
-<style></style>
+<style is:global>
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+</style>
