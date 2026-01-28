@@ -25,3 +25,4 @@ Script: (actually just an rsync command in the package.json):
 
 Afterwords I used a bit of AI to redesign the frontend of the site. I added a background grid, and attempted to add custom animations as well, but I was unable to find a performant solution.
 
+Finally, I started to work on writing this very blog! I added some custom formatting including the code block above, and I'm hoping to eventually add even more custom formatting for the various other markdown elements, depending on what I need for my site.
