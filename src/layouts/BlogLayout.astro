@@ -39,6 +39,11 @@ const { pageTitle } = Astro.props;
       padding: 2rem 2rem 2rem 5%;
     }
 
+    body{
+      background-image: radial-gradient(var(--accent-low) 1px, transparent 0);
+      background-size: 35px 35px;
+    }
+
     h1 {
       font-size: 3.5rem;
       color: var(--text);
@@ -84,5 +89,32 @@ const { pageTitle } = Astro.props;
     .md :global(a:hover) {
       color: var(--accent);
       border-bottom-color: var(--accent);
+    }
+
+    .md :global(code) {
+      background-color: rgba(108, 49, 67, 0.3);
+      color: var(--primary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+
+    .md :global(pre) {
+      background-color: rgba(15, 8, 10, 0.8);
+      border: 1px solid var(--secondary);
+      border-radius: 8px;
+      padding: 1.5rem;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    .md :global(pre code) {
+      background-color: transparent;
+      color: var(--primary);
+      padding: 0;
+      border-radius: 0;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
 </style>

@@ -5,10 +5,13 @@ import '../styles/global.css'
 
 
 <div class="headerbar">
-    <div class="innerheaderbar">
-    <a href="/alec.singer">Home</a> | 
-    <a href="/alec.singer/about">About</a> | 
-    <a href="/alec.singer/blogs">Blogs</a>
+    <div class="header-container">
+        <span class="header-title">Alec's Portfolio</span>
+        <div class="innerheaderbar">
+            <a href="/alec.singer">Home</a> | 
+            <a href="/alec.singer/about">About</a> | 
+            <a href="/alec.singer/blogs">Blogs</a>
+        </div>
     </div>
 </div>
 
@@ -23,10 +26,22 @@ import '../styles/global.css'
     z-index: 100;
 }
 
-.innerheaderbar {
-    max-width: 1200px;
+.header-container {
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+.innerheaderbar {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;

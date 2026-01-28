@@ -7,7 +7,7 @@ html {
   --primary: #d3a7b5;
   --secondary: #6c3143;
   --accent: #c36c88;
-  --accent-low: rgba(195, 108, 136, 0.4);
+  --accent-low: rgba(195, 108, 136, 0.25);
   color: var(--text);
   scroll-behavior: smooth;
 }
