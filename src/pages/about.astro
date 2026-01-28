@@ -4,8 +4,15 @@ import Layout from '../layouts/Layout.astro';
 ---
 <Layout pageTitle="About">
     <main>
-        <h1>About Alec</h1>
-        <p>Welcome to my portfolio! I'm a software developer and creator passionate about building beautiful and functional web experiences.</p>
+        <div class="about-section">
+            <div class="image-border">
+            <img src="/alec.singer/pfp.jpg" alt="Alec" width="450px" height="450px" style="object-fit: cover; border-radius: 8px;">
+            </div>
+            <div class="text-section">
+                <h1>About Alec</h1>
+                <h2>Coder, Engineer, etc.</h2>
+            </div>
+        </div>
     </main>
 </Layout>
 
@@ -13,6 +20,75 @@ import Layout from '../layouts/Layout.astro';
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 2rem 2rem 5%;
+    padding: 2rem 5%;
 }
+
+.about-section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.text-section h1 {
+    margin: 0;
+    font-size: 5.5rem;
+}
+
+.text-section h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--primary);
+    opacity: 1;
+}
+    .image-border {
+        position: relative;
+        width: 450px;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .image-border::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%) scale(1);
+        border-radius: 12px;
+        background: linear-gradient(var(--angle, 0deg), var(--primary), var(--secondary), var(--accent), var(--primary));
+        z-index: 0;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: borderSpin 3s linear infinite;
+    }
+    .image-border:hover::before {
+        transform: translate(-50%, -50%) scale(1.02);
+        animation: borderSpin 2s linear infinite;
+    }
+    .image-border img {
+        position: relative;
+        z-index: 1;
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+@keyframes borderSpin{
+    to {--angle: 360deg;}
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 </style>
