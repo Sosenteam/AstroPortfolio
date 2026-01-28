@@ -7,12 +7,13 @@ html {
   --primary: #d3a7b5;
   --secondary: #6c3143;
   --accent: #c36c88;
-  background-color: var(--background);
+  --accent-low: rgba(195, 108, 136, 0.4);
   color: var(--text);
   scroll-behavior: smooth;
 }
 
 body {
+  
   margin: 0;
   padding: 0;
   line-height: 1.6;

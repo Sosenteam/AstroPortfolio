@@ -17,16 +17,20 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
+  <Header />
   <body>
-    <Header />
-    <slot />
+    
+      <slot />
+    
   </body>
 </html>
 
-<style is:global>
+<style>
   body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-  }
+    background-image: radial-gradient(var(--accent-low) 1px, transparent 0);
+    background-size: 35px 35px;
+    }
 </style>

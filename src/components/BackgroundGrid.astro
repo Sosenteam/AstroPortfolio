@@ -3,6 +3,8 @@ import '../styles/global.css'
 
 ---
 <script>
+    let mouseX;
+    let mouseY;
 const GridContainer = document.getElementById('GridContainer')
 let dotGrid = [];
 if(GridContainer) {
@@ -24,10 +26,6 @@ if(GridContainer) {
     }
 }
 
- document.addEventListener('mousemove', (e) => {
-    let x = e.clientX;
-    let y = e.clientY;
- });
 </script>
 
 <div class="colored-grid" id="GridContainer"></div>
