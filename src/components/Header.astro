@@ -1,61 +1,63 @@
 ---
-import '../styles/global.css'
-
+import "../styles/global.css";
 ---
 
-
 <div class="headerbar">
-    <div class="header-container">
-        <span class="header-title">Alec's Portfolio</span>
-        <div class="innerheaderbar">
-            <a href="/alec.singer">Home</a> | 
-            <a href="/alec.singer/about">About</a> | 
-            <a href="/alec.singer/blogs">Blogs</a>
-        </div>
+  <div class="header-container">
+    <span class="header-title">Alec's Portfolio</span>
+    <div class="innerheaderbar"> |
+      <a href="/alec.singer">Home</a> |
+      <a href="/alec.singer/projects">Projects</a> |
+      <a href="/alec.singer/about">About</a> |
+
+      <a href="/alec.singer/blogs">Blogs</a>
     </div>
+  </div>
 </div>
 
 <style>
-.headerbar {
+  .headerbar {
     width: 100%;
     padding: 1.5rem 0;
     border-bottom: 1px solid var(--primary);
-    background: linear-gradient(180deg, rgba(211, 167, 181, 0.08) 0%, transparent 100%), var(--background);
+    background:
+      linear-gradient(180deg, rgba(211, 167, 181, 0.08) 0%, transparent 100%),
+      var(--background);
     position: sticky;
     top: 0;
     z-index: 100;
-}
+  }
 
-.header-container {
+  .header-container {
     max-width: 1800px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+  }
 
-.header-title {
+  .header-title {
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--primary);
-}
+  }
 
-.innerheaderbar {
+  .innerheaderbar {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
     font-size: 1.1rem;
     font-weight: 500;
-}
+  }
 
-.innerheaderbar a {
+  .innerheaderbar a {
     position: relative;
     transition: color 0.3s ease;
-}
+  }
 
-.innerheaderbar a::after {
-    content: '';
+  .innerheaderbar a::after {
+    content: "";
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -63,13 +65,13 @@ import '../styles/global.css'
     height: 2px;
     background-color: var(--accent);
     transition: width 0.3s ease;
-}
+  }
 
-.innerheaderbar a:hover {
+  .innerheaderbar a:hover {
     color: var(--accent);
-}
+  }
 
-.innerheaderbar a:hover::after {
+  .innerheaderbar a:hover::after {
     width: 100%;
-}
+  }
 </style>

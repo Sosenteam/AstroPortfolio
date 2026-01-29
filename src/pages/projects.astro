@@ -1,0 +1,144 @@
+---
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+
+interface ProjectPost {
+  url: string;
+  frontmatter: {
+    title: string;
+    description: string;
+    image: string;
+  };
+}
+
+const posts = Object.values(
+  import.meta.glob("./projects/*.md", { eager: true }),
+) as ProjectPost[];
+---
+
+<Layout pageTitle="Projects">
+  <main>
+    <h1>Projects</h1>
+    <div class="projectlist">
+      {
+        posts.map((post) => (
+          <div class="project-card">
+            <a href={post.url}>
+              <div class="project-content">
+                <img
+                  src={post.frontmatter.image}
+                  alt={post.frontmatter.title}
+                  class="project-image"
+                />
+                <div class="project-info">
+                  <h3>{post.frontmatter.title}</h3>
+                  <p>{post.frontmatter.description}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem 2rem 5%;
+  }
+
+  .projectlist {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: center;
+  }
+
+  .project-card {
+    background: rgba(108, 49, 67, 0.18);
+    border: 2px solid var(--primary);
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .project-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+    transform: translateY(-6px) scale(1.02);
+  }
+
+  .project-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .project-image {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    background: #222;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  }
+
+  .project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .project-info h3 {
+    color: var(--primary);
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  .project-info p {
+    color: var(--text);
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  @media (max-width: 700px) {
+    .project-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .project-image {
+      width: 100%;
+      height: 260px;
+      border-radius: 10px;
+    }
+    .project-info h3, .project-info p {
+      text-align: center;
+    }
+  }
+</style>
