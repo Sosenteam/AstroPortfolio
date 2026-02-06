@@ -23,6 +23,8 @@ Finally, I've started working on building a mini-golf game, based of the basic d
 
 My next step was adding tilemaps so each level could be build without requiring tons of individual nodes for the background/walls. After setting up a basic background map, I added custom collison to the foreground tilemap layer. I also made a seperate "hole" scene, that would trigger the loading of the next level. I added this scene to a scene collection in the foreground tilemap layer, so it can be place automatically without needing me to add it for each level.
 
+![Image no workie](/alec.singer/golfimage.png)
+
 ## Git, SSH & Git Godot Plugin
 
 After getting this far with my game, I thought it would be nice to find an easy solution for connecting git to Godot. I spent a few hours messing with the Git Godot plugin, including setting up SSH keys and even a PAT (personal access token), but I was unable to get the plugin to work consistantly (Not on my laptop). 
