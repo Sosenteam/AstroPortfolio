@@ -15,7 +15,7 @@ I also looked at a few basic game engines, including CT.JS (based on pixiJS), P5
 
 ## Godot, Godot, Godot!
 
-I started by doing the "Dodge the creeps" tutorial project in the Godot docs (which I did ~1 year ago), which was great for refreshing/practising my GD script syntax. After this tutorial, I dove into the docs (mostly in my free time). I read through the entirety of the core concepts section, then the 2D section, in addition to reading about specific mechanics including: Autoloads, Collision, Changing Scenes, Input, and much more. 
+I started by doing the ["Dodge the creeps"](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html) tutorial project in the Godot docs (which I did ~1 year ago), which was great for refreshing/practising my GD script syntax. After this tutorial, I dove into the docs (mostly in my free time). I read through the entirety of the core concepts section, then the 2D section, in addition to reading about specific mechanics including: Autoloads, Collision, Changing Scenes, Input, and much more. 
 
 Coming off of the weekend, I started by making a super simple pong game, though I had some struggles with manually moving 2DRigidBodies. After that, I built a simple demo that acted like a pool video game, in which you drag oppisite from the direction you want the ball to go. I also added other balls that the main cue ball could collide with.
 
