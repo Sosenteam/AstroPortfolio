@@ -13,4 +13,10 @@ We started the jam by brainstorming ideas related to the theme "Groundhog Day". 
 
 ## Start of Development
 
-Over the weekend, I started a protype with player movement and a super basic phil statemachine. When we came back on Tuesday, I made everyone else direct collaborators so they could make commits/edits as well. I started by spending most of my time figuring out how to 
+Over the weekend, I started a protype with player movement and a super basic phil statemachine. When we came back on Tuesday, I made everyone else direct collaborators so they could make commits/edits as well. I started by spending m ost of my time figuring out how to use raycasts to detect if the player was in Phil's viewcone. 
+
+## Statemachines (again)
+
+A large percent of my overall contrubutions to this project were related to phil, and expanding his statemachine. I made a total of 6 states, including a burrowing state and 3 diffrent attack states. 
+
+![Image no workie](/alec.singer/philnodetree.png)
